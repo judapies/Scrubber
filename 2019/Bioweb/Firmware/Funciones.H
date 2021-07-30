@@ -1,0 +1,247 @@
+////////////////////////////////////////////////////////////////////////////
+////        (C) Copyright 2018 JP Bioingenieria SAS                     ////
+////         Funciones utilizadas en CEGH con F y D                     ////
+////////////////////////////////////////////////////////////////////////////
+
+
+// Funcion para conversor analogo-digital
+float sensores(int x){
+float y;set_adc_channel(x);delay_ms(10);y=read_adc();return (y);
+}
+
+void SalidasOff(void){
+   Bomba_off;
+   Agua_off;
+   Peristaltica_off;
+   Desague_off;
+   Alarma_off;
+}
+
+void ConfigInicial(void){
+   delay_ms(1000);
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_1);
+   enable_interrupts(INT_TIMER1);
+   setup_adc_ports(AN0_TO_AN1);
+   setup_adc(ADC_CLOCK_DIV_32 );
+   enable_interrupts(global);
+   SalidasOff();
+   lcd_init();
+   printf(lcd_putc,"\f");
+}
+
+void LeeEEPROM(void){
+   MediaMovil=read_eeprom(5);delay_ms(20);
+   tiempoRenovacion=read_eeprom(6);
+   delay_ms(20);
+   //BandaDec=read_eeprom(7);
+   delay_ms(20);
+   cargaL=read_eeprom(8);
+   delay_ms(20);
+   cargaH=read_eeprom(9);
+   delay_ms(20);
+   cargaInicial=make16(cargaH,cargaL);
+   bInt=read_eeprom(20);
+   delay_ms(20);
+   bDec=read_eeprom(21);
+   delay_ms(20);
+   X0=read_eeprom(30);
+   delay_ms(20);
+   X1=read_eeprom(31);
+   delay_ms(20);
+   Y0Int=read_eeprom(32);
+   delay_ms(20);
+   Y0Dec=read_eeprom(33);
+   delay_ms(20);
+   Y1Int=read_eeprom(34);
+   delay_ms(20);
+   Y1Dec=read_eeprom(35);
+   delay_ms(20);
+   segundos=read_eeprom(50);
+   delay_ms(20);
+   minutos=read_eeprom(51);
+   delay_ms(20);
+   horas=read_eeprom(52);
+   delay_ms(20);
+   negativo=read_eeprom(60);
+   delay_ms(20);
+   tpulso=read_eeprom(70);
+   delay_ms(20);
+}
+
+void LimitaValores(void){
+   tmp=Y0Dec/10.0;
+   Y0=Y0Int+tmp;
+   
+   tmp=Y1Dec/10.0;
+   Y1=Y1Int+tmp;
+   
+   tmp=bDec/100.0;
+   b=bInt+tmp;
+   
+   if(MediaMovil>10){
+      MediaMovil=10;write_eeprom(5,10);delay_ms(30);
+   }
+   if(tiempoRenovacion>100){
+      tiempoRenovacion=100;write_eeprom(6,100);delay_ms(30);
+   }
+   if(cargaInicial>5000){
+      cargaInicial=500;write_eeprom(8,0xf4);delay_ms(30);write_eeprom(9,0x01);delay_ms(30);
+   }
+   if(horas>150)
+      horas=0;
+   if(minutos>59)
+      minutos=0;
+   if(segundos>59)
+      segundos=0;
+   if(b>10.0){
+      b=0.32;
+   }
+   if(X0>250){
+      X0=60;
+   }
+   if(X1>250){
+      X1=103;
+   }
+   if(Y0>10.0){
+      Y0=4.0;
+   }
+   if(Y1>14.0){
+      Y1=7.0;
+   }
+   if(negativo>20){
+      negativo=20;
+   }
+   //b=0.32
+   //x=60
+   //x1=103
+   //Y0=4.0
+   //Y1=7.0
+   //negativo=20;
+}
+
+void EnciendeBomba(void){
+   if(!input_state(PIN_D1)){
+      delay_ms(100);
+      lcd_init();
+      delay_ms(100);
+   }
+   Bomba_on;
+   estadoba=1;
+   Grabar=0;
+}
+
+void ApagaBomba(void){
+   if(input_state(PIN_D1)){
+      delay_ms(100);
+      lcd_init();
+      delay_ms(100);
+   }
+   Bomba_off;
+   estadoba=0;
+   if(Grabar==0){
+      write_eeprom(50,segundos);delay_ms(20);
+      write_eeprom(51,minutos);delay_ms(20);
+      write_eeprom(52,horas);delay_ms(20);
+      Grabar=1;
+   }
+}
+
+void MensajeGuardado(void){
+   printf(lcd_putc,"\f");
+   lcd_gotoxy(1,2);
+   printf(lcd_putc," !Valor Almacenado  ");
+   lcd_gotoxy(1,4);
+   printf(lcd_putc,"                    ");
+   lcd_gotoxy(1,3);
+   printf(lcd_putc,"    Correctamente!  ");
+   lcd_gotoxy(1,1);
+   printf(lcd_putc,"                    ");
+   delay_ms(2000);
+   printf(lcd_putc,"\f");
+}
+
+void Refresco(void){
+   delay_ms(100);
+   lcd_init();
+   delay_ms(100);
+}
+
+float Leer_Sensor_pH(int8 media){
+   float promediopH=0.0;
+   V1 = sensores(0);   //Lectura de ADC de 10 bit
+   if(X1-X0>0){
+      m=(Y1-Y0)/(X1-X0); //Y1=pH ingresado, Y0=pH ingresado, X0=ADC de Y0, X1=ADC de Y1
+   }
+   if(negativo==10)
+   {
+      PH=(m*V1)+b;// PH=mx+b
+   }
+   if(negativo==20)
+   {
+      PH=(m*V1)-b;// PH=mx+b
+   }  
+   
+   if(PH<0.0)
+   {
+      PH=0.0;
+   }
+
+   if(r>media-1)
+   {r=0;}
+   PromPH[r]=PH;r++;
+         
+   for(q=0;q<=(media-1);q++)
+   {
+      promediopH+=PromPH[q];
+   } 
+   promediopH=promediopH/media;   
+   
+   return promediopH;
+}
+
+void Controla(void){
+   sPH=sPpH+Banda;
+   sPL=sPpH-Banda;
+   if(pVpH>sPL && pVpH<sPH)
+   {
+      Peristaltica_off;
+      estadobp=0;
+   }
+   else
+   {
+      if(pVpH<sPL)
+      {
+         if(tcontrol<tpulso)
+         {
+            Peristaltica_on;
+            estadobp=1;
+         }
+         else
+         {
+            Peristaltica_off;
+            estadobp=0;
+         }
+      }
+      else
+      {
+         Peristaltica_off;
+         estadobp=0;
+      }
+   }
+}
+
+void mensajes(int8 x,y)// Funcion para imprimir mensajes de Menu Principal.
+{  
+   if(x==1)
+   {lcd_gotoxy(2,y);printf(lcd_putc,"Cal. un Punto      ");}
+   if(x==2)
+   {lcd_gotoxy(2,y);printf(lcd_putc,"Cal. dos Puntos    ");}
+   if(x==3)
+   {lcd_gotoxy(2,y);printf(lcd_putc,"Media Movil        ");}
+   if(x==4)
+   {lcd_gotoxy(2,y);printf(lcd_putc,"Tiempo Renovación  ");}
+   if(x==5)
+   {lcd_gotoxy(2,y);printf(lcd_putc,"Carga Inicial      ");}
+   if(x==6)
+   {lcd_gotoxy(2,y);printf(lcd_putc,"Mantenimiento      ");}
+}

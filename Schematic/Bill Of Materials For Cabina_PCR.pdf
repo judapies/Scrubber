@@ -1,0 +1,559 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Bill Of Materials For Cabina_PCR.DSN</TITLE>
+<STYLE TYPE="text/css">
+<!--
+.horzline
+ { border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-bottom-style: solid;
+    border-top-color: #000099;
+    border-right-color: #000099;
+    border-bottom-color: #000099;
+    border-left-color: #000099;
+    color: #000099;
+ }
+.mainheading
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: #000099;
+ }
+.designtitle
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+ }
+.designvalue
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+ }
+.categoryheading
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: #000099;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-bottom-style: solid;
+    border-top-color: #000099;
+    border-right-color: #000099;
+    border-bottom-color: #000099;
+    border-left-color: #000099;
+    border-top-style: solid;
+    background-color: #FFFFE0;
+ }
+.fieldheading
+ { font-family: Arial, Helvetica, sans-serif;
+	 font-size: small;
+	 color: #000099;
+	 text-decoration: underline;
+ }
+.oddfield
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+ }
+.evenfield
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+ }
+.subtotal
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #000099;
+ }
+.total
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #000099;
+ }
+.notes
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+ } 
+.footer
+ { font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+ } 
+-->
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE>
+   <TR> 
+      <TD COLSPAN="30" CLASS="mainheading"> Bill Of Materials For Cabina_PCR.DSN </TD>
+   </TR>
+   <TR> 
+      <TD COLSPAN="30"> 
+         <TABLE BORDER="0" CELLPADDING="0">
+            <TR VALIGN="BASELINE"> 
+               <TD CLASS="designtitle">Design Title</TD>
+               <TD>:</TD>
+               <TD CLASS="designvalue">Cabina_PCR.DSN</TD>
+            </TR>
+            <TR VALIGN="BASELINE"> 
+               <TD CLASS="designtitle">Author</TD>
+               <TD>:</TD>
+               <TD CLASS="designvalue">&lt;NONE&gt;</TD>
+            </TR>
+            <TR VALIGN="BASELINE"> 
+               <TD CLASS="designtitle">Revision</TD>
+               <TD>:</TD>
+               <TD CLASS="designvalue">&lt;NONE&gt;</TD>
+            </TR>
+            <TR VALIGN="BASELINE"> 
+               <TD CLASS="designtitle">Design Created</TD>
+               <TD>:</TD>
+               <TD CLASS="designvalue">lunes, 14 de abril de 2014</TD>
+            </TR>
+            <TR VALIGN="BASELINE"> 
+               <TD CLASS="designtitle">Design Last Modified</TD>
+               <TD>:</TD>
+               <TD CLASS="designvalue">s&aacute;bado, 12 de septiembre de 2015</TD>
+            </TR>
+            <TR VALIGN="BASELINE"> 
+               <TD CLASS="designtitle">Total Parts In Design</TD>
+               <TD>:</TD>
+               <TD CLASS="designvalue">58</TD>
+            </TR>
+         </TABLE>
+      </TD>
+   </TR>
+   
+   
+   <TR> 
+      <TD HEIGHT="10" COLSPAN="30"></TD>
+   </TR>
+   <TR> 
+      <TD COLSPAN="30" CLASS="categoryheading">19&nbsp;Resistors</TD>
+   </TR>
+   <TR> 
+      <TD HEIGHT="5" COLSPAN="30"></TD>
+   </TR>
+   <TR CLASS="fieldheading"> 
+      <TD WIDTH="10"></TD>
+      <TD>Quantity:</TD>
+      <TD WIDTH="10"></TD>
+      <TD>References</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Value</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Order Code</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">7</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">R1, R12-R15, R18, R20</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>10k</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>M10K</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">6</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">R2, R4, R6, R7, R10, R16</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>330</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>M10K</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">6</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">R3, R5, R8, R9, R11, R17</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>1k</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>M10K</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   
+   <TR> 
+      <TD HEIGHT="10" COLSPAN="30"></TD>
+   </TR>
+   <TR> 
+      <TD COLSPAN="30" CLASS="categoryheading">6&nbsp;Capacitors</TD>
+   </TR>
+   <TR> 
+      <TD HEIGHT="5" COLSPAN="30"></TD>
+   </TR>
+   <TR CLASS="fieldheading"> 
+      <TD WIDTH="10"></TD>
+      <TD>Quantity:</TD>
+      <TD WIDTH="10"></TD>
+      <TD>References</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Value</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Order Code</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">C1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>100nF</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">2</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">C2, C3</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>22pF</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">C11</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>470uF</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">C12</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>10uF</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">C13</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>0.1uF</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   
+   <TR> 
+      <TD HEIGHT="10" COLSPAN="30"></TD>
+   </TR>
+   <TR> 
+      <TD COLSPAN="30" CLASS="categoryheading">16&nbsp;Integrated Circuits</TD>
+   </TR>
+   <TR> 
+      <TD HEIGHT="5" COLSPAN="30"></TD>
+   </TR>
+   <TR CLASS="fieldheading"> 
+      <TD WIDTH="10"></TD>
+      <TD>Quantity:</TD>
+      <TD WIDTH="10"></TD>
+      <TD>References</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Value</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Order Code</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">U1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>PIC18F4550</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">6</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">U2, U3, U6, U8, U10, U13</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>MOC3021</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">6</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">U4, U5, U7, U9, U11, U14</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>Q7006L5</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">U12</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>7805</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">U15</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>LM324</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">U16</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>7806</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   
+   
+   
+   <TR> 
+      <TD HEIGHT="10" COLSPAN="30"></TD>
+   </TR>
+   <TR> 
+      <TD COLSPAN="30" CLASS="categoryheading">17&nbsp;Miscellaneous</TD>
+   </TR>
+   <TR> 
+      <TD HEIGHT="5" COLSPAN="30"></TD>
+   </TR>
+   <TR CLASS="fieldheading"> 
+      <TD WIDTH="10"></TD>
+      <TD>Quantity:</TD>
+      <TD WIDTH="10"></TD>
+      <TD>References</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Value</TD>
+      <TD WIDTH="10"></TD>
+      <TD NOWRAP>Order Code</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">BR1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>BRIDGE</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">6</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">J1-J4, J6, J9</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>TBLOCK-I3</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">J5</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>AC_IN</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">J7</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>SIL-100-08</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">J8</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>9VAC</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">J10</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>SIL-100-03</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">J11</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>SIL-100-04</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">LCD1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>LM044L</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">2</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">RV1, RV2</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>1K</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>Digikey 3352T-102LF-ND</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="evenfield"> 
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">SP1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>MPVX5004DP</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   <TR CLASS="oddfield"> 
+      <TD WIDTH="10" CLASS="evenfield"></TD>
+      <TD VALIGN="BASELINE">1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE">X1</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>CRYSTAL</TD>
+      <TD WIDTH="10"></TD>
+      <TD VALIGN="BASELINE" NOWRAP>&nbsp;</TD>
+      
+      <TD WIDTH="10"></TD>
+   </TR>
+   
+   
+   <TR> 
+      <TD COLSPAN="30">&nbsp; </TD>
+   </TR>
+   <TR ALIGN="RIGHT" CLASS="footer"> 
+      <TD COLSPAN="30">s&aacute;bado, 12 de septiembre de 2015&nbsp;&nbsp;10:52:37 a.m.</TD>
+   </TR>
+</TABLE>
+</BODY>
+</HTML>

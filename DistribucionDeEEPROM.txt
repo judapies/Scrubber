@@ -1,0 +1,21 @@
+Posiciones de memoria ROM
+
+05.Media Movil
+06.Banda int
+07.Banda decimal
+08.Setpoint int
+09.Setpoint decimal
+
+20.bInt
+21.bDecimal
+
+30.X0
+31.X1
+32.Y0 int
+33.Y0 dec
+34.Y1 int
+35.Y1 dec
+
+50.segundos
+51.minutos
+52.horas
